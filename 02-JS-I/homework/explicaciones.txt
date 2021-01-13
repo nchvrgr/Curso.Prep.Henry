@@ -1,0 +1,84 @@
+Variables
+
+    Una variable es como un lugar en donde se puede guardar un dato. Llevándolo a la vida real, esto se vería así: en un papel se puede escribir palabras (variable = el papel; dato = las palabras), en un cajón se puede guardar juguetes (variable = el cajón; dato = los juguetes), un tupper se puede guardar comida, etc.
+    Este dato almacenado sirve para poder utilizarlo repetidas veces en diferentes ocasiones, ya que, si no estuviera almacenado, tendrías que crear uno nuevo cada vez que lo quieras usar. Por ejemplo, si en una hoja de matemáticas creamos la variable "Un Millón" y dentro de ella guardamos el dato "1000000", podemos solicitar la variable "Un Millón" para utilizarla cuantas veces querramos, sin la necesidad de escribir repetidamente "1000000" cada vez que querramos usar este número.
+    Las variables se denominan con la palabra "var".
+    Ejemplos:
+        var diezMillones = 10000000;
+        var nombre = "Juán";
+        var apellido = "Pérez";
+    Los nombres de las funciones tienen que ser unificados en una sola palabra, es decir, la función no puede llamarse "Diez Millones", por eso la llamamos "diezMillones" todo junto.
+
+
+Strings
+
+    Un String es un tipo de dato (los que guardamos en las variables) que se forma por una cadena de caracteres (un caracter puede ser una letra, un signo, un número, etc.). Por ejemplo, la palabra "auto" es una cadena formada por los caracteres "a", "u", "t" y "o". 
+    Este tipo de dato se llama String ya que esta palabra es "cadena" en inglés. 
+    Ejemplos de Strings = "abc123", "aeiou", "casa", "!#$%$&".     
+    Los Strings se escriben siempre entre comillas, ya que éstas delimitan dónde comienza y dónde termina el dato, de lo contrario el programa no va a reconocerlos.
+
+
+Funciones
+
+    Una función es como un manual con una serie de instrucciones, que puede utilizarse para aplicarlas con distintos valores.
+    Por ejemplo, creamos una función para sumar y decimos que tome dos números y los sume.
+    Estos dos números que se sumarán son lo que conocemos como "argumentos", son los valores que necesita la función para realizarse.
+    Para crear funciones debemos nombrarlas con "function" y también nombrar entre paréntesis a los argumentos que necesita.
+    Por ejemplo, para la función de sumas que nombramos anteriormente, necesitamos ponerle un nombre a la función y un nombre a cada argumento:
+        function Sumar(primerNumero, segundoNumero){
+            return(primerNumero + segundoNumero)
+        }   
+    El nombre que le dimos a la función es "Sumar", y el de cada argumento es "primerNumero" y "segundoNumero".
+    Entonces cada vez que querramos usar la función "Sumar" debemos asignarle un valor a primerNumero y segundoNumero.
+    Por ejemplo, para sumar los números 6 y 4 con esta función, debemos llamarla de la siguiente forma:
+        Sumar(4, 6)
+    De esta manera, el argumento "primerNumero" tendrá como valor al número 4 "segundoNumero" al número 6.
+    El resultado que esta función nos arrojará se define luego de la palabra "return", como vemos en el ejemplo.
+    "Return" en inglés significa "retorno" o "devolución", por eso es que en él asignamos lo que el programa nos "devolverá".
+    De esta manera, cuando llamemos a la función suma (con los valores 6 y 4), lo que nos devolverá es el resultado "10", ya que el return dice que debe devolver la suma de los valores asignados.
+    Así se vería la respuesta del programa al usar la función:
+        >>> Sumar(4, 6)     [Esto es lo que el usuario escribe]
+        >>> 10              [Esto es lo que devuelve el programa]
+
+
+Declaraciones if
+
+    "If" es un operador que sirve para comparar, y de ahí ver qué resultado debería arrojarnos.
+    La palabra "if" en inglés significa "si", de la manera que la utilizamos en el castellano para poner una condición. Por ejemplo: 'si' tuviera plata me lo compraría, 'si' tuviera tiempo lo haría.
+    Por ejemplo, podemos usar el operador "if" para determinar si una casa es blanca, y asignarle una respuesta en caso de que se cumpla esta condición:
+        Para eso tendríamos que declarar primero la condición y luego la respuesta.
+        Es como decirle al programa: "Si la casa es blanca, responder 'Verdadero'. "  
+        Para escribir esto usando el operador if, debemos hacerlo de la siguiente manera:
+            if (casa == blanca) return "Verdadero";
+        Como vemos, entre los paréntesis ponemos la condición, y luego del return, la respuesta.
+    Para cuando no se cumple la condición que pusimos, podemos declarar una respuesta alternativa para dar al usuario, por ejemplo:
+        "Si la casa es blanca devolver 'Verdadero', pero si no es blanca, devolver 'Falso'. "
+        Para hacer esto necesitamos del operador "else".
+            if (casa == blanca) return "Verdadero);
+            else return "Falso";
+        Como podemos ver, luego de "else" van las instrucciones a seguir en el caso de que no se cumpla la función (que la casa sea blanca).
+        "Else" en inglés significa algo así como "si no", "de otro modo", "de otro caso", por eso ponemos else después del if, es como decirle al programa "si se cumple, responder de esta manera, si no, de esta otra".
+    Por ejemplo, podemos identificar si una persona tiene la altura permitida para ingresar a un juego en un parque:
+        Para ello debemos declarar la altura de la persona, vamos a hacerlo en centímetros:
+            var altura = 180;
+        Y luego debemos identificar con el condicional si está apta para entrar o no:
+            if (altura > 175) return "No puede entrar";
+            else return "Si puede entrar;   
+        Como podemos ver, en el condicional se pregunta si la altura es mayor a 175 centímetros, utilizando el símbolo ">" para comparar los valores, otros de los símbolos que podemos utilizar para comparar son "<==", ">==", "<===", ">===", "!==", "<", "!===", "==", "==="; cada uno de ellos tiene una función diferente a la hora de comparar dos valores.
+
+Valores booleanos
+
+    Los "valores booleanos" son otro tipo de datos que solo tiene dos posibles varintes: "true" y "false".
+    Estos valores sirven, como dicen sus propios nombres, para declarar o comprobar si un valor o declaración es verdadera o falsa.
+    Por ejemplo, al utilizar el operador "==" para comprobar si un elemento es igual a otro, el resultado por defecto será true o false:
+        let a = 1
+        let b = 2
+        b == a
+    Acá le estamos preguntando al programa si "b" es igual a "a". Como podemos ver estas variables tienen distintos valores, por lo tanto al preguntarle esto, el programa nos dirá que es falso.
+        >>> false
+    Un ejemplo en el que nos devuelva true:
+        >>> a == (b - 1)       [Usuario]
+        >>> true               [Programa]
+    Acá le preguntamos si el valor de "a" (1) es igual al valor de "b" (2) menos uno (2-1 = 1), esto es verdadero por ende el programa nos devuelve true.
+    
+               
