@@ -1,0 +1,32 @@
+explicar arrays
+
+Arrays
+
+    Un array, tambíen conocido como matríz o arreglo, es una forma de almacenar más de un dato en una variable, es decir, guardar más de una cosa en su lugar, así como en un cajón podemos guardar varios juguetes.
+    Por ejemplo, podemos listar en un array nuesta caja de lápices de colores:
+        
+        let colores = ["rojo", "amarillo", "azul", "verde", "rosa", "violeta"]
+    
+    Como podemos ver, este array es un grupo de strings, pero tambien podemos crear grupos de numeros, booleanos, o incluso de varios tipos combinados.
+    Los elementos del array siempre van separados por una coma y encerrados por corchetes [].
+    Cada elemento del array tiene una posición:
+        
+        Las posiciones empiezan a contarse desde cero, por ende la posición de "rojo" es 0, ya que es la primera.
+            
+            ["rojo", "amarillo", "azul", "verde", "rosa", "violeta"]
+                0         1         2       3        4        5
+        
+        Si bien el array tiene 6 elementos, la posición del último elemento es 5.  
+
+    Estas posiciones pueden utilizarse para llamar a un elemento del array:
+
+        Por ejemplo, si queremos nombrar al elemento de la posición 1, podemos escribirlo así:
+
+            console.log(colores[1]);    //amarillo
+
+        El programa va a buscar la posición 1 y devolverá el valor que tenga en dicha posición, en este caso sería amarillo.
+
+        Tambien se puede llamar a más de una posición:
+
+            console.log(colores[1], colores[3]);    //amarillo, verde
+                  
