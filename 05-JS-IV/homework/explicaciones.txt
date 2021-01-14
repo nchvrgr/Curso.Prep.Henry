@@ -1,0 +1,95 @@
+Objetos
+Propiedades
+Métodos
+Bucle for…in
+Notación de puntos vs notación de corchetes
+
+
+Objetos 
+
+        Un objeto en la programación es un elemento con características propias que nosotros le damos, estas características nos sirven para crear al objeto cuantas veces querramos.
+        Por ejemplo, si quisieramos hacer varios autos de distintos colores, podemos crear un objeto "auto" que tenga todas las características de un auto y que pueda variar en las siguientes: color, cantidad de asientos, cantidad de puertas.
+        Entonces, si quisieramos crear una auto verde de 5 asientos y 4 puertas, solo tenemos que decirle al programa "crear nuevo auto(color=verde, asientos=5, puertas=4)", y nuestro auto se va a crear con todas las características que tiene un auto, y con el color, puertas y asientos que le pedimos.
+        Un objeto tiene sus propias características, por ejemplo, vamos a crear una cara:
+        
+            const cara {
+                    ojos = "marrones";
+                    tieneNariz = true;
+                    tieneBoca = true;
+                    cejas = "marrones";
+                    tienePestañas = true;
+            }
+        
+        Entonces si queremos saber de que color son los ojos, podemos preguntarle así al programa:
+
+            cara.ojos;       // marrones
+
+        Y el programa nos dirá que son marrones.
+        
+        Estas características que vimos que se le pueden agregar al objeto, son lo que llamamos "propiedades".
+        Además de las propiedades, un objeto puede tener "métodos", son funciones que le podemos asignar al objeto para que sea capaz de realizarlas.
+        Por ejemplo, podemos añadirle a nuestro objeto "cara" la capacidad de pestañear:
+            
+            const cara = {
+                    ojos = "marrones";
+                    tieneNariz = true;
+                    tieneBoca = true;
+                    cejas = "marrones";
+                    tienePestañas = true;
+
+                    pestañear: function(){
+                        console.log("Pestañas cerradas");
+                        console.log("Pestañas abiertas");
+                    }
+            }
+
+        Como podemos ver, agregamos una función dentro del objeto, la cual sirve para "abrir y cerrar las pestañas de nuestra cara".
+        Obviamente esta función que acabamos de crear solo nos servirá para que el programa escriba "pestañas abiertas" y "pestañas cerradas", pero es un ejemplo de lo que se puede hacer con los objetos en la programación avanzada.
+        Esta función podemos llamarla cuando querramos escribiendo 'cara.pestañear();'.
+
+
+Bucles for in
+ 
+    Los bucles "for in" son otra forma de crear bucles en arrays u objetos, este tipo de bucle recorre todos los elementos del objeto/array y realiza la función asignada.
+    Por ejemplo, tenemos la lista "cajaDeColores":
+
+        const cajaDeColores = {"rojo", "azul", "amarillo", "verde", "rosa"}
+
+    Si queremos crear un bucle que recorra todo el objeto y vaya imprimiendolos uno por uno, podemos crear un bucle for in:
+
+        for (var colorIndividual in cajaDeColores) {
+            console.log(colorIndividual);
+        }
+    
+    Así nuestro bucle recorrerá todos los elementos de la caja, y le dará su valor a la variable "colorIndividual" para poder tratar con él.
+    En este caso, le dijimos que imprima el valor de "colorIndividual", por lo tanto, va a imprimir el valor de cada posición de cajaDeColores, ya que la variable "colorIndividual" toma los valores de la lista.
+    En la primera repetición del bucle, se imprimirá la posición 0 de la lista, o sea "rojo", y una vez realizada la acción, va a repetirse el proceso pero tomando esta vez la posición siguiente (1), "azul". Así hasta la última posición (4).
+    El proceso va a repetirse hasta que la variable "colorIndividual" haya tomado y escrito los valores de todas las posiciones de la lista:
+       
+        >> rojo
+        >> azul
+        >> amarillo
+        >> verde
+        >> rosa
+        
+
+Notación de puntos vs notación de corchetes
+
+    La "notación de puntos" y la "notación de corchetes" son dos formas diferentes de acceder a los valores de un objeto.
+    Por ejemplo, tenemos un objeto "botella" con las siguientes propiedades: color transparente, tapa roja, etiqueta azul.
+
+        const botella = {
+            color = "transparente";
+            tapa = "roja";
+            etiqueta = "azul";
+        }
+    
+    Si queremos saber el color de la tapa, tenemos dos formas de hacerlo:
+
+        Con notación de puntos:
+            >> botella.color;
+        
+        Con notación de corchetes:
+            >> botella[color];
+
+    Ambas formas son válidas y sirven para lo mismo.
