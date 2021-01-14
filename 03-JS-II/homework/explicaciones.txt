@@ -1,0 +1,120 @@
+// explicar for, &&, ||, !
+
+For
+
+    "For" es un una expresión que nos sirve para crear bucles, es decir, series de pasos que se repiten cuantas veces querramos.
+    Por ejemplo, podemos hacer que nuestro programa cuente nuestros años vividos desde que nacimos hasta nuestra edad actual:
+        
+        for (let años = 0; años <= 12; años +) {
+            console.log(años);
+        } 
+
+    En el for declaramos que, en un principio, teníamos cero años, luego le decimos que el límite va a ser 12, ya que esa es nuestra edad, y luego le aclaramos que, cada vez que se cumpla el proceso que vamos a asignarle, se agregue un año. El proceso que le pedimos que haga, es que imprima la edad en la pantalla.
+    Entonces, al leer las instrucciones, nuestro programa escribirá nuestra edad inicial [console.log(años)], es decir, cero años (let años = 0):
+        
+        >> 0
+   
+    Luego de cumplir la función que le asignamos (escribir la edad), nuestra cantidad de años va a aumentar un número (años + 1), por lo tanto al realizar la función "console.log(años)" ya no va a escribir 0, sino 1: 
+        
+        >> 1
+    
+    Este procedimiento va a volver a realizarse hasta que la edad sea 12 años (años <= 12).
+        
+        >> 0
+        >> 1
+        >> 2
+        >> 3
+        >> 4
+        >> 5
+        >> 6 
+        >> 7
+        >> 8
+        >> 9
+        >> 10
+        >> 11
+        >> 12
+   
+    Lo que necesitamos para este for es declarar la edad inicial, la edad límite y la cantidad de años que se incrementa al cumplirse, y luego de todo, dentro de los corchetes "{}", le decimos la función que necesitamos que haga.
+    Es decir, si en donde va el incremento pusieramos "años + 3" en vez de "años + 1", nuestro programa haría esto:
+    
+        >> 0
+        >> 3
+        >> 6
+        >> 9
+        >> 12
+   
+    O por ejemplo, si el lugar de la edad inicial pusieramos "9" en lugar de "0", nuestro programa haría asi:
+       
+        >> 9
+        >> 10
+        >> 11
+        >> 12
+    
+    Y si en lugar de "años <= 12" pusieramos "años <= 20", el programa seguiría contando todos los años hasta llegar a 20.
+
+        >> (...)
+        >> 18
+        >> 19
+        >> 20
+
+
+&& ||
+
+    Estos símbolos son lo que conocemos como "and" y "or", sirven para establecer condiciones (como en un "if" o en un "for") de manera más detallada.
+    
+    "&&" se le conoce tambíen como "and", ya que "and" en inglés significa "Y", y lo que hace este símbolo es agregar otra condición.
+        
+        Por ejemplo: necesitamos comprobar que una casa tenga puertas y ventanas, entonces en nuestro condicional vamos a pedirle al programa que verifique en cada casa que se cumplan la condición "tiene puerta" pero también la condición "tiene ventanas". 
+        De esta manera le pediríamos eso al programa:
+            
+            if (la casa tiene puerta && la casa tiene ventanas){
+                return("Verdadero");
+            }
+
+        Como podemos ver, los símbolos && nos sirven para decirle al programa que verifique las dos condiciones en lugar de solo una. Podemos hacer lo mismo con muchas más condiciones.
+        El programa verificará que ambas condiciones se cumplan, si por lo menos una sola no se cumple, entonces no se va a realizar la acción asignada.
+        Es decir, para que un if que tiene "&&" se realice, deben cumplirse sí o sí todas las condiciones que le pedimos.
+
+    El otro símbolo que nos queda, "||", es el que conocemos como "or", esto en inglés significa "o", al contrario de && que significa "y".
+    Al igual que el anterior, este símbolo nos sirve para poner varias condiciones, pero en lugar de pedir que todas se cumplan, pide que por lo menos se cumpla una.
+    
+        Es decir, en lugar de decirle al programa "verificá que la casa tenga puerta y ventanas", le dice "verificá que la casa tenga puerta o ventanas".
+        Por lo tanto si una casa solo tiene puerta, nuestro programa la contará como verdadero ya que se cumple por lo menos una de las condiciones.
+        Así lo escribríamos:
+
+            if (la casa tiene puerta || la casa tiene ventanas){
+                return("Verdadero");
+            }
+        
+        También se tomaría como verdadero en el caso se cumplieran todas las condiciones (que la casa tenga puerta y ventanas), o sea, la única forma de que no se tome como verdadero es que no se cumpla ninguna de las condiciones que pusimos.
+
+
+!
+
+    El signo '!' antes del '=' significa "distinto de".
+    Es decir, el '!=' es lo contrario al '=':
+        
+        1 = 1       // 1 es igual a 1
+        1 != 0      // 1 es distinto de 0
+        0 = 0       // 0 es igual a 0
+        0 != 1      // 0 es distinto de 1
+
+    Por ejemplo, podemos comprobar que dos alumnos no tengan el mismo nombre:
+
+        let nombreAlumno1 = "Marcos";
+        let nombreAlumno2 = "Julián";
+
+        if (nombreAlumno1 !== nombreAlumno2){
+            console.log("Tienen un nombre distinto")
+        }
+        else {
+            console.log("Tienen el mismo nombre")
+        } 
+    
+    Como podemos ver, se le pregunta al programa si el nombre del primer alumno es distinto al nombre del segundo, en caso de que se cumpla, el programa dirá que no tienen el mismo nombre, de lo contrario, dirá que sus nombre son iguales.
+    
+             
+    
+    
+
+        
