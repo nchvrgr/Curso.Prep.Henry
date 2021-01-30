@@ -1,0 +1,17 @@
+Funciones Callback
+
+    Las funciones Callback son funciones que pueden tomar otras funciones para realizarse, por ejemplo, una función llamada pedirNombre, que le pide el nombre al usuario, puede utilizarse como argumento en otra función llamada saludarUsuario, la cual toma el nombre que te pidió la otra función para realizar el saludo.
+
+        function pedirNombre(
+            var nombre = prompt('¿Como te llamas?');
+            return nombre;
+        )
+
+        function saludarUsuario(cb){
+            return `Hola, ${cb}`
+        }
+
+        pedirNombre();
+        saludarUsuario(pedirNombre);
+
+    Como podemos ver, primero se ejecuta la función pedirNombre que nos retorna el nombre del usuario, y luego la función saludarUsuario la toma como argumento para hacer el saludo;
