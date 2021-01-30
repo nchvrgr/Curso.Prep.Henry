@@ -1,0 +1,29 @@
+prototype
+Constructors (de Clases)
+
+
+Prototype
+
+    Es una característica que todos los objetos tienen. Los métodos y propiedades pueden ir dentro del constructor del objeto pero también pueden estar en su prototype.
+    Modificar el protoype es una manera de agregar métodos a un objeto ya existente sin la necesidad de crear uno nuevo.
+    Por ejemplo, si tenemos el objeto }"Usuario" definido, podemos agregarle el método "presentacion":
+
+    function Usuario(nombre, edad){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    Usuario.prototype.presentacion = function(){
+        console.log("Hola, soy " + this.nombre + " y tengo " + this.edad)
+    }
+
+    De esta manera le estamos asignando un nuevo método a Usuario sin necesidad de crear otro objeto.
+    Así como para los objetos, también puede utilizarse en las clases, para darle acceso a este nuevo método a cada objeto de la clase en la que lo agregamos.
+
+
+
+Constructors
+
+    El constructor en una clase es donde definimos las propiedades y métodos de los objetos que serán creados a partir de ésta.
+
+    
