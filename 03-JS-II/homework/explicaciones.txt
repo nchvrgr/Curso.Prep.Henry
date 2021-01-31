@@ -5,7 +5,7 @@ For
     "For" es un una expresión que nos sirve para crear bucles, es decir, series de pasos que se repiten cuantas veces querramos.
     Por ejemplo, podemos hacer que nuestro programa cuente nuestros años vividos desde que nacimos hasta nuestra edad actual:
         
-        for (let años = 0; años <= 12; años +) {
+        for (let años = 0; años <= 12; años + 1) {
             console.log(años);
         } 
 
@@ -112,7 +112,7 @@ For
         } 
     
     Como podemos ver, se le pregunta al programa si el nombre del primer alumno es distinto al nombre del segundo, en caso de que se cumpla, el programa dirá que no tienen el mismo nombre, de lo contrario, dirá que sus nombre son iguales.
-    
+
              
     
     
